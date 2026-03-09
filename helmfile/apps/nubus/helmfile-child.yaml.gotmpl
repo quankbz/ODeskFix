@@ -47,7 +47,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.nubus.enabled }}
-    timeout: 6000
+    timeout: 36000
     {{- if ne (env "OPENDESK_1_12_0_SKIP_PVC_MIGRATION") "" }}
     postRenderer: "./OPENDESK_1_12_0_SKIP_PVC_MIGRATION-post-renderer-nubus.sh"
     {{- end }}
@@ -75,7 +75,7 @@ releases:
     needs:
       - "ums"
     installed: {{ .Values.apps.nubus.enabled }}
-    timeout: 6000
+    timeout: 36000
 
   # NGINX S3 Gateway
   - name: "nubus"
@@ -87,7 +87,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.nubus.enabled }}
-    timeout: 6000
+    timeout: 36000
 
 commonLabels:
   deployStage: "050-components"
