@@ -1,0 +1,3 @@
+# Normalize all text files to LF on checkout (avoids CRLF / bash\r on Linux).
+# Git still treats detected binaries as binary (text=auto).
+* text=auto eol=lf

@@ -1691,3 +1691,5 @@ extraSecrets:
   - name: "ums-keycloak-bootstrap-ldap-opendesk-credentials"
     stringData:
       password: {{ .Values.secrets.nubus.ldapSearch.keycloak | quote }}
+      # Filename expected by univention-keycloak inside the bootstrap container (see bootstrap logs).
+      ldapread.secret: {{ .Values.secrets.nubus.ldapSearch.keycloak | quote }}
