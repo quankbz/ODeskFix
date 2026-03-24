@@ -121,7 +121,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-well-known"
     chart: "element-well-known-repo/{{ .Values.charts.elementWellKnown.name }}"
@@ -132,7 +132,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-synapse-web"
     chart: "synapse-web-repo/{{ .Values.charts.synapseWeb.name }}"
@@ -143,7 +143,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-synapse"
     chart: "synapse-repo/{{ .Values.charts.synapse.name }}"
@@ -154,7 +154,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-matrix-user-verification-service-bootstrap"
     chart: "synapse-create-account-repo/{{ .Values.charts.synapseCreateAccount.name }}"
@@ -165,7 +165,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-matrix-user-verification-service"
     chart: "matrix-user-verification-service-repo/{{ .Values.charts.matrixUserVerificationService.name }}"
@@ -176,7 +176,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "matrix-neoboard-widget"
     chart: "matrix-neoboard-widget-repo/{{ .Values.charts.matrixNeoboardWidget.name }}"
@@ -187,7 +187,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "matrix-neochoice-widget"
     chart: "matrix-neochoice-widget-repo/{{ .Values.charts.matrixNeochoiceWidget.name }}"
@@ -198,7 +198,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "matrix-neodatefix-widget"
     chart: "matrix-neodatefix-widget-repo/{{ .Values.charts.matrixNeodatefixWidget.name }}"
@@ -209,7 +209,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "matrix-neodatefix-bot-bootstrap"
     chart: "synapse-create-account-repo/{{ .Values.charts.synapseCreateAccount.name }}"
@@ -220,7 +220,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "matrix-neodatefix-bot"
     chart: "matrix-neodatefix-bot-repo/{{ .Values.charts.matrixNeodatefixBot.name }}"
@@ -231,7 +231,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.element.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   # openDesk Enterprise Releases
   - name: "opendesk-synapse-admin"
@@ -243,7 +243,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.elementAdmin.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-synapse-adminbot-bootstrap"
     chart: "synapse-create-account-repo/{{ .Values.charts.synapseCreateAccount.name }}"
@@ -254,7 +254,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.elementAdmin.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-synapse-adminbot-pipe"
     chart: "synapse-pipe-repo/{{ .Values.charts.synapsePipe.name }}"
@@ -265,7 +265,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.elementAdmin.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-synapse-adminbot-web"
     chart: "synapse-adminbot-web-repo/{{ .Values.charts.synapseAdminbotWeb.name }}"
@@ -276,7 +276,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.elementAdmin.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-synapse-auditbot-bootstrap"
     chart: "synapse-create-account-repo/{{ .Values.charts.synapseCreateAccount.name }}"
@@ -287,7 +287,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.elementAdmin.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-synapse-auditbot-pipe"
     chart: "synapse-pipe-repo/{{ .Values.charts.synapsePipe.name }}"
@@ -298,7 +298,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.elementAdmin.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-synapse-groupsync"
     chart: "synapse-groupsync-repo/{{ .Values.charts.synapseGroupsync.name }}"
@@ -309,7 +309,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.elementGroupsync.enabled }}
-    timeout: 36000
+    timeout: 7201
 
 commonLabels:
   deployStage: "050-components"

@@ -104,7 +104,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.redis.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "memcached"
     chart: "memcached-repo/{{ .Values.charts.memcached.name }}"
@@ -115,7 +115,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.memcached.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "postgresql"
     chart: "postgresql-repo/{{ .Values.charts.postgresql.name }}"
@@ -126,7 +126,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.postgresql.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "mariadb"
     chart: "mariadb-repo/{{ .Values.charts.mariadb.name }}"
@@ -137,7 +137,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.mariadb.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "postfix"
     chart: "postfix-repo/{{ .Values.charts.postfix.name }}"
@@ -148,7 +148,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.postfix.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "opendesk-dkimpy-milter"
     chart: "dkimpy-repo/{{ .Values.charts.dkimpy.name }}"
@@ -159,7 +159,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.dkimpy.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "clamav"
     chart: "clamav-repo/{{ .Values.charts.clamav.name }}"
@@ -170,7 +170,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.clamavDistributed.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "clamav-simple"
     chart: "clamav-simple-repo/{{ .Values.charts.clamavSimple.name }}"
@@ -181,7 +181,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.clamavSimple.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   - name: "minio"
     chart: "minio-repo/{{ .Values.charts.minio.name }}"
@@ -192,7 +192,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.minio.enabled }}
-    timeout: 36000
+    timeout: 7201
 
   # openDesk Enterprise Releases
   - name: "cassandra"
@@ -204,7 +204,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.cassandra.enabled }}
-    timeout: 36000
+    timeout: 7201
 
 commonLabels:
   deployStage: "030-services-external"
