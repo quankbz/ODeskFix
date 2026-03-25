@@ -1647,6 +1647,8 @@ nubusKeycloakBootstrap:
       bindDn: {{ printf "uid=ldapsearch_keycloak,cn=users,%s" .Values.ldap.baseDn }}
       existingSecret:
         name: "ums-keycloak-bootstrap-ldap-opendesk-credentials"
+        keyMapping:
+          password: "password"
   oidc:
     rp:
       umcServer:
@@ -1691,5 +1693,3 @@ extraSecrets:
   - name: "ums-keycloak-bootstrap-ldap-opendesk-credentials"
     stringData:
       password: {{ .Values.secrets.nubus.ldapSearch.keycloak | quote }}
-      # Filename expected by univention-keycloak inside the bootstrap container (see bootstrap logs).
-      ldapread.secret: {{ .Values.secrets.nubus.ldapSearch.keycloak | quote }}
