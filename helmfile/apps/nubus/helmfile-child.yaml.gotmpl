@@ -39,7 +39,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.nubus.enabled }}
-    timeout: 900
+    timeout: 9000
     {{- if ne (env "OPENDESK_1_12_0_SKIP_PVC_MIGRATION") "" }}
     postRenderer: "./post-renderer-nubus-OPENDESK_1_12_0_SKIP_PVC_MIGRATION.sh"
     {{- end }}
@@ -67,7 +67,7 @@ releases:
     needs:
       - "ums"
     installed: {{ .Values.apps.nubus.enabled }}
-    timeout: 900
+    timeout: 9000
 
 commonLabels:
   deployStage: "050-components"

@@ -74,7 +74,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.dovecot.enabled }}
-    timeout: 900
+    timeout: 9000
 
   - name: "postfix-ox"
     chart: "postfix-repo/{{ .Values.charts.postfix.name }}"
@@ -88,7 +88,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.postfix.enabled }}
-    timeout: 900
+    timeout: 9000
 
   - name: "open-xchange"
     chart: "open-xchange-repo/{{ .Values.charts.oxAppSuite.name }}"
@@ -103,7 +103,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.oxAppSuite.enabled }}
-    timeout: 900
+    timeout: 9000
     {{- if eq .Values.ingress.controller "haproxy" }}
     postRenderer: "./post-renderer-openxchange-HAPROXY.sh"
     {{- end }}
@@ -117,7 +117,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ .Values.apps.oxAppSuite.enabled }}
-    timeout: 900
+    timeout: 9000
 
   - name: "ox-connector"
     chart: "ox-connector-repo/{{ .Values.charts.oxConnector.name }}"

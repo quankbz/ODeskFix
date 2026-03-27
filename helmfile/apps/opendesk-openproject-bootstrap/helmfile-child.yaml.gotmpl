@@ -24,7 +24,7 @@ releases:
       - {{ . }}
       {{- end }}
     installed: {{ and .Values.apps.openproject.enabled .Values.apps.nextcloud.enabled }}
-    timeout: 900
+    timeout: 9000
 
 commonLabels:
   deployStage: "060-components"
